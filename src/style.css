@@ -1,0 +1,264 @@
+:root {
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: #d1d1d14d;
+  --fc-neutral-text-color: grey;
+  --fc-border-color: #ddd;
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: black;
+  --fc-button-border-color: black;
+  --fc-button-hover-bg-color: #222;
+  --fc-button-hover-border-color: #222;
+  --fc-button-active-bg-color: black;
+  --fc-button-active-border-color: black;
+  --fc-event-bg-color: black;
+  --fc-event-border-color: black;
+  --fc-event-text-color: #fff;
+  --fc-event-selected-overlay-color: #d1d1d14d;
+  --fc-more-link-bg-color: #d0d0d0;
+  --fc-non-business-color: #d6d6d64d;
+  --fc-highlight-color: #d1d1d14d;
+  --fc-today-bg-color: #d1d1d14d;
+  --fc-now-indicator-color: red;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  height: 100vh;
+}
+
+/* 
+ * Tooltip
+ */
+.tippy-box .tooltip {
+  display: flex;
+  flex-flow: row;
+}
+
+.tippy-box .tooltip button,
+.tippy-box .tooltip .content {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #1d1d1d;
+  color: white;
+  margin: 0 0.25rem;
+  box-shadow: 0px 6px 4px -4px black;
+  display: flex;
+}
+
+.tippy-box .tooltip .content {
+  flex-flow: column;
+}
+
+.tippy-box .tooltip .content a {
+  color: cyan;
+  font-size: smaller;
+}
+
+.tippy-box .tooltip button {
+  border-width: 0;
+  appearance: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* 
+ * Calendar
+ */
+#calendar {
+  height: 100%;
+  padding: 0.75rem 2rem;
+}
+
+#calendar .fc-view-harness.fc-view-harness-active,
+#calendar .fc-daygrid-body.fc-daygrid-body-unbalanced,
+#calendar .fc-scrollgrid-sync-table {
+  height: 100% !important;
+}
+
+#calendar .fc-daygrid-day-top > a {
+  width: 100%;
+  max-width: 6rem;
+}
+
+#calendar .datetemp {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+#calendar .datetemp > .date {
+  font-weight: bold;
+  text-align: right;
+}
+
+#calendar .datetemp > .weather {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#calendar .datetemp > .weather > div {
+  padding: 0 0.15rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#calendar .datetemp > .weather > div > span:last-child:after {
+  color: #c60808;
+  content: '°C';
+}
+
+#calendar .datetemp > .weather > div > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar .datetemp > .weather > div svg {
+  color: black;
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+/* 
+ * Modal CSS
+ */
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modal-bg {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container {
+  border-radius: 1rem;
+  background: #f5f5f5;
+  position: relative;
+  padding: 30px;
+}
+
+form,
+form .group {
+  display: flex;
+  flex-direction: column;
+}
+
+form .group {
+  margin-bottom: 1rem;
+}
+
+form input,
+form input,
+form input {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #b5b5b5;
+}
+
+form .group:last-child {
+  width: 600px;
+  height: 400px;
+}
+
+form input[type='submit'] {
+  background-color: transparent;
+  color: #b5b5b5;
+  border: 0.1rem solid #b5b5b5;
+}
+
+form input[type='submit']:hover {
+  background-color: #b5b5b5;
+  color: black;
+  border: 0.1rem solid #b5b5b5;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  outline: none;
+  appearance: none;
+  color: red;
+  background: none;
+  border: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*
+ * Map
+ */
+#map {
+  height: 150px;
+}
+
+/*
+ * Container
+ */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.container.center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+ * Login
+ */
+.login {
+  width: 20rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #f5f5f5;
+}
+
+.login h1 {
+  font-size: 0.9;
+  margin: 0 0 1rem 0;
+}
