@@ -1,0 +1,25 @@
+{
+  "name": "sdd-mish-hinton-task2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.3.3"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/list": "^6.1.5",
+    "@fullcalendar/timegrid": "^6.1.5",
+    "@types/leaflet": "^1.9.3",
+    "invert-color": "^2.0.0",
+    "leaflet": "^1.9.4",
+    "tippy.js": "^6.3.7"
+  }
+}

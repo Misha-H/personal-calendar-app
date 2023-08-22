@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calender Application</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Modal -->
+      <div class="modal" id="add-event-modal">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container">
+          <h1>Add Event</h1>
+
+          <form>
+            <div class="group">
+              <label for="event-title" class="hide">Title</label>
+              <input
+                type="text"
+                name="event-title"
+                id="event-title"
+                placeholder="Enter Title Here."
+              />
+            </div>
+            <div class="group">
+              <input
+                type="text"
+                name="event-description"
+                id="event-description"
+                placeholder="Enter Short Description Here."
+              />
+            </div>
+
+            <div class="group">
+              <label for="event-date-start" class="hide">Start</label>
+              <input
+                type="datetime-local"
+                name="event-date-start"
+                id="event-date-start"
+              />
+            </div>
+
+            <div class="group">
+              <label for="event-date-end" class="hide">End</label>
+              <input
+                type="datetime-local"
+                name="event-date-end"
+                id="event-date-end"
+              />
+            </div>
+
+            <div class="group">
+              <label for="event-colour" class="hide">Colour</label>
+              <input type="color" name="event-colour" id="event-colour" />
+            </div>
+
+            <div class="group">
+              <label for="event-location" class="hide">Location</label>
+              <input
+                type="text"
+                name="event-location"
+                id="event-location"
+                class="hide"
+              />
+              <div id="map"></div>
+            </div>
+
+            <input type="submit" value="Submit" />
+          </form>
+
+          <button class="modal-close modal-exit">X</button>
+        </div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
